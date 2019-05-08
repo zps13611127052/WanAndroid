@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <q.rorbin.verticaltablayout.VerticalTabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#EDEDED"
+        app:indicator_color="@color/colorPrimary"
+        app:indicator_width="2dp"
+        app:indicator_gravity="left"
+        app:tab_height="50dp"
+        app:tab_margin="15dp"
+        android:visibility="visible"
+        app:tab_mode="scrollable">
+    </q.rorbin.verticaltablayout.VerticalTabLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_toRightOf="@id/tablayout"
+        android:id="@+id/navi_rly_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/arrows"
+        app:backgroundTint="@color/turquoise"
+        app:rippleColor="#0097a7" />
+
+</RelativeLayout>

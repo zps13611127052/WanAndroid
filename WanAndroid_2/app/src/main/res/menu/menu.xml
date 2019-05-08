@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:checked="true"
+        android:id="@+id/wanandroid_id"
+        android:icon="@drawable/menu_jiqiren_selector"
+        android:checkable="true"
+        android:title="@string/wanandroid" />
+
+    <item
+        android:id="@+id/heart"
+        android:checkable="true"
+        android:icon="@drawable/menu_xin_selector"
+        android:title="@string/collect" />
+
+    <item
+        android:id="@+id/setting"
+        android:checkable="true"
+        android:icon="@drawable/menu_setting_selector"
+        android:title="@string/setting" />
+
+    <item
+        android:id="@+id/about"
+        android:checkable="true"
+        android:icon="@drawable/menu_about_selector"
+        android:title="@string/about" />
+</menu>

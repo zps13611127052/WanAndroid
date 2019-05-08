@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.wanandroid_2.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/ml"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                    <android.support.design.widget.AppBarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/blue_gradient_bg"
+                            app:layout_scrollFlags="scroll|enterAlways">
+
+                            <TextView
+                                android:id="@+id/toolbar_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/homepage"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                        </android.support.v7.widget.Toolbar>
+                    </android.support.design.widget.AppBarLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fragment_id"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+            </android.support.design.widget.CoordinatorLayout>
+
+            <RadioGroup
+                android:id="@+id/group_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_homepage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/rb_homepage_selector"
+                    android:gravity="center"
+                    android:text="@string/homepage"
+                    android:textColor="@color/textcolor_select" />
+
+                <RadioButton
+                    android:id="@+id/rb_knowledge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/rb_knowledge_selector"
+                    android:gravity="center"
+                    android:text="@string/knowledge"
+                    android:textColor="@color/textcolor_select" />
+
+                <RadioButton
+                    android:id="@+id/rb_official"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/rb_office_selector"
+                    android:gravity="center"
+                    android:text="@string/Official"
+                    android:textColor="@color/textcolor_select" />
+
+                <RadioButton
+                    android:id="@+id/rb_navigation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/rb_navigation_selector"
+                    android:gravity="center"
+                    android:text="@string/navigation"
+                    android:textColor="@color/textcolor_select" />
+
+                <RadioButton
+                    android:id="@+id/rb_project"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/rb_project_selector"
+                    android:gravity="center"
+                    android:text="@string/project"
+                    android:textColor="@color/textcolor_select" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--侧滑页面-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        app:headerLayout="@layout/head"
+        app:menu="@menu/menu" />
+
+</android.support.v4.widget.DrawerLayout>

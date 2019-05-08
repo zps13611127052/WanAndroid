@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wanandroid_2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".activity.Know_Activity"
+            android:theme="@style/KnowTheme" />
+        <activity
+            android:name=".webactivity.HomeWebActivity"
+            android:theme="@style/HomeWebTheme" />
+        <activity
+            android:name=".webactivity.OfficialWebActivity"
+            android:theme="@style/officialWebTheme" />
+        <activity
+            android:name=".webactivity.ProjectWebActivity"
+            android:theme="@style/ProjectWebTheme" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/RegisterTheme" />
+        <activity android:name=".activity.SouSuoActivity" />
+        <activity
+            android:name=".activity.AboutWeActivity"
+            android:label="@string/title_activity_about_we"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.WebsiteActivity" />
+        <activity
+            android:name=".activity.CollectActivity"
+            android:theme="@style/CollectTheme" />
+        <activity android:name=".activity.WelcomeActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>
